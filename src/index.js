@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './Components/App/App';
-import Store from "./Store";
 import {Provider} from "react-redux";
+import App from './Components/App/App';
 import ErrorBoundary from "./Components/ErrorBoundary";
+import Store from "./Store";
 import Context from "./Context";
 import Service from "./Service";
+import './index.css';
 
 const service = new Service();
 
