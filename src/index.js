@@ -14,7 +14,7 @@ ReactDOM.render(
   <Provider store = {Store}>
     <ErrorBoundary>
       <Context.Provider value={service}>
-        <App />
+        <App/>
       </Context.Provider>
     </ErrorBoundary>
   </Provider>,

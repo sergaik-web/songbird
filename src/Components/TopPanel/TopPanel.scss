@@ -1,0 +1,14 @@
+.top-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26px;
+  margin-top: 15px;
+}
+
+.logo {
+  background: url("./logo.png") no-repeat;
+  background-size: contain;
+  height: 100px;
+  width: 300px;
+}

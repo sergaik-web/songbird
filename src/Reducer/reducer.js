@@ -1,5 +1,12 @@
 const initialState = {
-  scroll: 0,
+  gameEnd: false,
+  id: 0,
+  page: 0,
+  random:  4,
+  score:  0,
+  select: false,
+  step: 0,
+  win: false
 };
 
 const reducer = (state = initialState, actions) => {
@@ -7,7 +14,6 @@ const reducer = (state = initialState, actions) => {
     case "SCROLL_PAGE":
       return {
         ...state,
-        scroll: actions.scroll,
       };
 
     default:
