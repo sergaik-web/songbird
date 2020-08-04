@@ -1,0 +1,177 @@
+{
+  "predatorsBirds": [
+    {
+      "ruName": "Белоголовый Сип",
+      "engName": "Gyps fulvus"
+    },
+    {
+      "ruName": "Сипуха",
+      "engName": "Tyto alba"
+    },
+    {
+      "ruName": "Беркут",
+      "engName": "Aquila chrysaetos"
+    },
+    {
+      "ruName": "Лунь",
+      "engName": "Circus aeruginosu"
+    },
+    {
+      "ruName": "Бородач",
+      "engName": "Gypaetus barbatus"
+    },
+    {
+      "ruName": "Змееяд",
+      "engName": "Circaetus gallicus"
+    },
+    {
+      "ruName": "Кобчик",
+      "engName": "Falco vespertinus"
+    },
+    {
+      "ruName": "Коршун",
+      "engName": "Elanus caeruleus"
+    },
+    {
+      "ruName": "Подорлик",
+      "engName": "Clanga pomarina"
+    },
+    {
+      "ruName": "Конёк",
+      "engName": "Anthus trivialis"
+    },
+    {
+      "ruName": "Канюк",
+      "engName": "Buteo buteo"
+    },
+    {
+      "ruName": "Пустельга",
+      "engName": "Falco tinnunculus"
+    },
+    {
+      "ruName": "Сапсан",
+      "engName": "Falco peregrinus"
+    },
+    {
+      "ruName": "Ястребиная Славка",
+      "engName": "Sylvia nisoria"
+    }
+  ],
+
+  "forestBirds" : [
+    {
+      "ruName": "Дрозд",
+      "engName": "Turdus merula"
+    },
+    {
+      "ruName": "Дятел",
+      "engName": "Dendrocopos major"
+    },
+    {
+      "ruName": "Сычик",
+      "engName": "Glaucidium passerinum"
+    },
+    {
+      "ruName": "Синица",
+      "engName": "Parus major"
+    },
+    {
+      "ruName": "Неясыть",
+      "engName": "Strix aluco"
+    },
+    {
+      "ruName": "Клёст",
+      "engName": "Loxia curvirostra"
+    },
+    {
+      "ruName": "Сойка",
+      "engName": "Garrulus glandarius"
+    },
+    {
+      "ruName": "Кукушка",
+      "engName": "Cuculus canorus"
+    },
+    {
+      "ruName": "Рябчик",
+      "engName": "Tetrastes bonasia"
+    },
+    {
+      "ruName": "Глухарь",
+      "engName": "Tetrao urogallus"
+    },
+    {
+      "ruName": "Тетерев",
+      "engName": "Lyrurus tetrix"
+    },
+    {
+      "ruName": "Куропатка",
+      "engName": "Perdix perdix"
+    },
+    {
+      "ruName": "Гагара",
+      "engName": "Gavia stellata"
+    },
+    {
+      "ruName": "Баклан",
+      "engName": "Phalacrocorax carbo"
+    }
+  ],
+  "otherBirds": [
+    {
+      "ruName": "Снегирь",
+      "engName": "Pyrrhula pyrrhula"
+    },
+    {
+      "ruName": "Аист",
+      "engName": "Ciconia ciconia"
+    },
+    {
+      "ruName": "Цапля",
+      "engName": "Ardea cinerea"
+    },
+    {
+      "ruName": "Соловей",
+      "engName": "Luscinia luscinia"
+    },
+    {
+      "ruName": "Воробей",
+      "engName": "Passer domesticus"
+    },
+    {
+      "ruName": "Голубь",
+      "engName": "Columba livia"
+    },
+    {
+      "ruName": "Кряква",
+      "engName": "Anas platyrhynchos"
+    },
+    {
+      "ruName": "Дрозд",
+      "engName": "Turdus merula"
+    },
+    {
+      "ruName": "Синица",
+      "engName": "Parus major"
+    },
+    {
+      "ruName": "Жаворонок",
+      "engName": "Alauda arvensis"
+    },
+    {
+      "ruName": "Ворон",
+      "engName": "Corvus corax"
+    },
+    {
+      "ruName": "Ворона",
+      "engName": "Corvus corone"
+    },
+    {
+      "ruName": "Скворец",
+      "engName": "Sturnus vulgaris"
+    },
+    {
+      "ruName": "Трясогузка",
+      "engName": "Motacilla flava"
+    }
+  ]
+}
