@@ -1,4 +1,7 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
+import './Navigation.css';
 
 const Navigation = () => {
   const dataNavItems = [
@@ -13,17 +16,17 @@ const Navigation = () => {
   const navItems = dataNavItems.map((item, index)=>{
         return (
           item.active ?
-            <li key={index} className={'nav-item'}>{item.label}</li>:
-            <li key={index} className={'nav-item deactive'}>{item.label}</li>)
+            <Button key={index} className={'nav-item'}>{item.label}</Button>:
+            <Button key={index} className={'nav-item'} style={{color:'white'}} disabled>{item.label}</Button>)
       });
 
   console.log(navItems);
 
 
   return (
-    <ul className={'Navigation'}>
+    <ButtonGroup variant="contained" color="" className={'navigation'}>
       {navItems}
-    </ul>
+    </ButtonGroup>
   )
 };
 
