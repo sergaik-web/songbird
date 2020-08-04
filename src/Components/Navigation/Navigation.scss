@@ -1,5 +1,8 @@
 .nav-item {
   flex-grow: 1;
+  &:focus {
+    background-color: #b4b4b4 !important;
+  }
 }
 
 .navigation {

@@ -16,7 +16,7 @@ const Navigation = () => {
   const navItems = dataNavItems.map((item, index)=>{
         return (
           item.active ?
-            <Button key={index} className={'nav-item'}>{item.label}</Button>:
+            <Button key={index} className={'nav-item'} >{item.label}</Button>:
             <Button key={index} className={'nav-item'} style={{color:'white'}} disabled>{item.label}</Button>)
       });
 
