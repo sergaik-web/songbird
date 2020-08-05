@@ -1,11 +1,9 @@
 import React from "react";
 import './TopPanel.css';
 import Navigation from "../Navigation";
-import DB from '../../DB/DB';
 
 
 const TopPanel = () => {
-  console.log(DB);
   const score=0;
   return (
     <>

@@ -16,15 +16,15 @@ const Navigation = () => {
   const navItems = dataNavItems.map((item, index)=>{
         return (
           item.active ?
-            <Button key={index} className={'nav-item'} >{item.label}</Button>:
-            <Button key={index} className={'nav-item'} style={{color:'white'}} disabled>{item.label}</Button>)
+            <Button key={index} className={'nav-item'} style={{backgroundColor:'rgba(233, 233, 233, 1)'}} >{item.label}</Button>:
+            <Button key={index} className={'nav-item'} style={{backgroundColor:'rgba(233, 183, 183, 1)'}} disabled>{item.label}</Button>)
       });
 
   console.log(navItems);
 
 
   return (
-    <ButtonGroup variant="contained" color="" className={'navigation'}>
+    <ButtonGroup variant="contained" color="default" className={'navigation'}>
       {navItems}
     </ButtonGroup>
   )
