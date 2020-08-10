@@ -1,7 +1,7 @@
 import React from "react";
 import AnswerOptions from "../AnswerOptions";
 import AnswerInfo from "../AnswerInfo";
-import NextQuestionButton from "../NextQuestionButton";
+import NextLevelButton from "../NextLevelButton";
 import './GamePanel.css';
 
 const GamePanel = () => {
@@ -11,7 +11,7 @@ const GamePanel = () => {
         <AnswerOptions/>
         <AnswerInfo/>
       </div>
-      <NextQuestionButton/>
+      <NextLevelButton/>
     </div>
   )
 };
