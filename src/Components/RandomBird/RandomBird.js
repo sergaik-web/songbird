@@ -1,14 +1,23 @@
 import React from "react";
 import './RandomBird.css';
-import image from './unknownBird.jpg';
+import {connect} from "react-redux";
 
 
-const RandomBird = () => {
+
+
+const RandomBird = (props) => {
   return (
     <div className={'random-bird'}>
       <div className={'image-bird'} style={{backgroundImage: 'url("https://live.staticflickr.com/65535/50209429396_2a03571d6d.jpg")'}}/>
+      <h2>{props.bird}</h2>
     </div>
   )
 };
 
-export default RandomBird;
+const mapStateToProps = (state) => {
+  return {
+    bird: state.bird
+  }
+};
+
+export default connect(mapStateToProps)(RandomBird);
