@@ -1,27 +1,31 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
+import {connect} from "react-redux";
+import {setSelectClassBirds} from "../../Actions/Actions";
 import './Navigation.css';
 
-const Navigation = () => {
+
+const Navigation = (props) => {
   const dataNavItems = [
-    {label:'Разминка', active: true},
-    {label:'Лесные птицы', active: true},
-    {label:'Хищные птицы', active: true},
-    {label:'Распостранённые птицы', active: true},
-    {label:'Все птицы', active: true},
+    {label:'Разминка', active: true, classBirds: 'otherBirds'},
+    {label:'Лесные птицы', active: true, classBirds: 'forestBirds'},
+    {label:'Хищные птицы', active: true, classBirds: 'predatorsBirds'},
+    {label:'Распостранённые птицы', active: true, classBirds: 'otherBirds'},
+    {label:'Все птицы', active: true, classBirds: 'allBirds'},
     {label:'Морские птицы', active: false},
   ];
+
+  const handleClick = (classBirds) => {
+    props.setSelectClassBirds(classBirds);
+  };
 
   const navItems = dataNavItems.map((item, index)=>{
         return (
           item.active ?
-            <Button key={index} className={'nav-item'} style={{backgroundColor:'rgba(233, 233, 233, 1)'}} >{item.label}</Button>:
+            <Button onClick={()=>handleClick(item.classBirds)} key={index} className={'nav-item'} style={{backgroundColor:'rgba(233, 233, 233, 1)'}} >{item.label}</Button>:
             <Button key={index} className={'nav-item'} style={{backgroundColor:'rgba(233, 183, 183, 1)'}} disabled>{item.label}</Button>)
       });
-
-  console.log(navItems);
-
 
   return (
     <ButtonGroup variant="contained" color="default" className={'navigation'}>
@@ -30,4 +34,6 @@ const Navigation = () => {
   )
 };
 
-export default Navigation;
+const mapDispatchToProps = { setSelectClassBirds };
+
+export default connect('', mapDispatchToProps)(Navigation);

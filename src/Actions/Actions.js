@@ -4,6 +4,13 @@ const requests = () => {
   }
 };
 
+const setSelectClassBirds = (classBirds) => {
+  return {
+    type: 'SET_SELECT_CLASS_BIRDS',
+    classBirds: classBirds
+  }
+};
+
 const setRandomBird = (bird) => {
   return {
     type: 'SET_RANDOM_BIRD',
@@ -11,4 +18,4 @@ const setRandomBird = (bird) => {
   }
 };
 
-export {requests, setRandomBird};
+export {requests, setRandomBird, setSelectClassBirds};

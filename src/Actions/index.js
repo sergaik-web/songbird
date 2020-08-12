@@ -1,2 +1,2 @@
-import {requests, setRandomBird} from './Actions';
-export default {requests, setRandomBird};
+import {requests, setRandomBird, setSelectClassBirds} from './Actions';
+export default {requests, setRandomBird, setSelectClassBirds};

@@ -2,12 +2,12 @@ const initialState = {
   gameEnd: false,
   id: 0,
   page: 0,
-  random:  4,
   score:  0,
-  select: false,
+  select: '', //in work
   step: 0,
   win: false,
-  bird: '',
+  bird: '', //in work
+  classBirds: 'otherBirds', //in work
   loaded: false
 };
 
@@ -23,6 +23,13 @@ const reducer = (state = initialState, actions) => {
       return {
         ...state,
         bird: actions.bird
+      };
+
+    case 'SET_SELECT_CLASS_BIRDS':
+      console.log(state.classBirds);
+      return {
+        ...state,
+        classBirds: actions.classBirds
       };
 
     default:
