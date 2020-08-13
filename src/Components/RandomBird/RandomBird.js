@@ -6,7 +6,6 @@ import {connect} from "react-redux";
 
 
 const RandomBird = (props) => {
-  console.log(props.bird, props.selectBird);
   return (
     <div className={'random-bird'}>
       <div className={'image-bird'} style={{backgroundImage: 'url("https://live.staticflickr.com/65535/50209429396_2a03571d6d.jpg")'}}/>

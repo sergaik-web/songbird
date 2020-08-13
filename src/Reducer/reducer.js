@@ -20,13 +20,13 @@ const reducer = (state = initialState, actions) => {
       };
 
     case 'SET_RANDOM_BIRD':
+      console.log(actions.bird);
       return {
         ...state,
         bird: actions.bird
       };
 
     case 'SET_SELECT_CLASS_BIRDS':
-      console.log(state.classBirds);
       return {
         ...state,
         classBirds: actions.classBirds
