@@ -1,6 +1,5 @@
 const initialState = {
   gameEnd: false,
-  id: 0,
   page: 0,
   score:  0,
   select: '', //in work
@@ -30,6 +29,12 @@ const reducer = (state = initialState, actions) => {
       return {
         ...state,
         classBirds: actions.classBirds
+      };
+
+    case 'SET_STEP':
+      return {
+        ...state,
+        step: state.step+1
       };
 
     default:

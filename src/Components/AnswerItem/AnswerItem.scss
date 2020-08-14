@@ -1,0 +1,34 @@
+$margin: 7px;
+
+.answerItem {
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+  &:hover {
+    background-color: #b4b4b4;
+  }
+}
+
+.noSelect::before {
+  margin-right: $margin;
+  content: '✹';
+  color: grey;
+}
+
+.select-true {
+  background-color: lightgreen;
+  &:before {
+    margin-right: $margin;
+    content: '✹';
+    color: green;
+  }
+}
+
+.select-false {
+  background-color: lightcoral;
+  &:before {
+    margin-right: $margin;
+    content: '✹';
+    color: red;
+  }
+}

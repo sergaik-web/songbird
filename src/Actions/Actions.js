@@ -18,4 +18,10 @@ const setRandomBird = (bird) => {
   }
 };
 
-export {requests, setRandomBird, setSelectClassBirds};
+const setStep = () => {
+  return {
+    type: 'SET_STEP',
+  }
+};
+
+export {requests, setRandomBird, setSelectClassBirds, setStep};
