@@ -1,34 +1,26 @@
 $margin: 7px;
 
 .answerItem {
+  display: flex;
   font-size: 18px;
   padding: 8px;
   cursor: pointer;
+  align-items: center;
   &:hover {
-    background-color: #b4b4b4;
+    background-color: darkgrey;
   }
 }
 
-.noSelect::before {
-  margin-right: $margin;
-  content: '✹';
-  color: grey;
-}
-
 .select-true {
-  background-color: lightgreen;
-  &:before {
-    margin-right: $margin;
-    content: '✹';
-    color: green;
+  color: green;
+  &:hover {
+    background-color: white;
   }
 }
 
 .select-false {
-  background-color: lightcoral;
-  &:before {
-    margin-right: $margin;
-    content: '✹';
-    color: red;
+  color: indianred;
+  &:hover {
+    background-color: white;
   }
 }

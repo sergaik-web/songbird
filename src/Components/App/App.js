@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from "../Header";
-import RandomBird from "../RandomBird";
+import RandomBird from "../QuestionPanel";
 import GamePanel from "../GamePanel";
 import './App.css';
 

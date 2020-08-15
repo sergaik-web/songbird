@@ -24,4 +24,24 @@ const setStep = () => {
   }
 };
 
-export {requests, setRandomBird, setSelectClassBirds, setStep};
+const setWin = () => {
+  return {
+    type: 'SET_WIN',
+  }
+};
+
+const setPage = () => {
+  return {
+    type: 'SET_PAGE'
+  }
+};
+
+const setScore = (score) => {
+  return {
+    type: 'SET_SCORE',
+    score: score
+  }
+};
+
+
+export {requests, setRandomBird, setSelectClassBirds, setStep, setWin, setPage, setScore};

@@ -1,12 +1,15 @@
 import React, {useEffect, useRef} from "react";
-import db from "../../DB/DB";
-import {setRandomBird, setStep} from "../../Actions/Actions";
+import TwitterIcon from '@material-ui/icons/Twitter';
+import {setRandomBird, setStep, setWin, setScore} from "../../Actions/Actions";
 import {connect} from "react-redux";
+import db from "../../DB/DB";
 import './AnswerItem.css';
 
 const AnswerItem = (props) => {
   const selectBirds = useRef(db.otherBirds);
   const selectBird = useRef('');
+  let win = false;
+  let scoreQuestion = 5;
 
   useEffect(()=>{
     switch (props.classBirds) {
@@ -36,36 +39,54 @@ const AnswerItem = (props) => {
     props.setRandomBird(selectBird.current);
   }
 
-  const AnswerItems = () => {
+  const createArrBirds = () => {
     const randomPosition = randomCount();
     let arrBirds = [];
     while (arrBirds.length < 5) {
       const randomBird = selectBirds.current[Math.floor(Math.random()*selectBirds.current.length)].ruName;
-
       if (!arrBirds.includes(randomBird) && (randomBird!==selectBird.current)){
         arrBirds.push(randomBird)
       }
     }
     arrBirds.splice(randomPosition, 0, selectBird.current);
-    console.log(arrBirds);
-    return (
-      arrBirds.map((item, index) => {
-        return <li key={index} className={'answerItem noSelect'} onClick={(elem)=>handleClick(elem.target)}>{item}</li>
-      })
-    )
+    return (arrBirds);
   };
 
-  const acceptAnswer = (item) => {
+  const acceptAnswer = (item, icon) => {
+    win = true;
+    icon.style.color = 'green';
     item.classList = 'answerItem select-true';
+    props.setWin();
+    props.setScore(scoreQuestion);
   };
 
-  const rejectAnswer = (item) => {
+  const rejectAnswer = (item, icon) => {
+    icon.style.color = 'red';
     item.classList = 'answerItem select-false';
     props.setStep();
+    scoreQuestion--;
   };
 
   const handleClick = (item) => {
-    item.innerHTML === selectBird.current ? acceptAnswer(item) : rejectAnswer(item);
+    if (!win) {
+      item.innerText === selectBird.current ?
+        acceptAnswer(item, item.children[0]) :
+        rejectAnswer(item, item.children[0]);
+    }
+  };
+
+  const AnswerItems = () => {
+    const arrBirds = createArrBirds();
+    return (
+      arrBirds.map((item, index) => {
+        return (
+          <li key={index} className={'answerItem noSelect'} onClick={(elem)=>handleClick(elem.target)}>
+            <TwitterIcon fontSize="small" style={{marginRight: '10px'}}/>
+            {item}
+          </li>
+        )
+      })
+    )
   };
 
   return (
@@ -82,10 +103,11 @@ const randomCount = (count=6) => {
 const mapStateToProps = (state) => {
   return {
     classBirds: state.classBirds,
+    page: state.page
   }
 };
 
-const mapDispatchToProps = {setRandomBird, setStep};
+const mapDispatchToProps = {setRandomBird, setStep, setWin, setScore};
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(AnswerItem);

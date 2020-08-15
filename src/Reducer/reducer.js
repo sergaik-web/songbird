@@ -1,13 +1,12 @@
 const initialState = {
   gameEnd: false,
-  page: 0,
+  page: 0, //in work
   score:  0,
-  select: '', //in work
-  step: 0,
-  win: false,
+  step: 0, //in work
+  win: false, //in work
   bird: '', //in work
   classBirds: 'otherBirds', //in work
-  loaded: false
+  loaded: false //in work
 };
 
 const reducer = (state = initialState, actions) => {
@@ -28,6 +27,12 @@ const reducer = (state = initialState, actions) => {
     case 'SET_SELECT_CLASS_BIRDS':
       return {
         ...state,
+        gameEnd: false,
+        page: 0,
+        score:  0,
+        step: 0,
+        win: false,
+        bird: '',
         classBirds: actions.classBirds
       };
 
@@ -35,6 +40,27 @@ const reducer = (state = initialState, actions) => {
       return {
         ...state,
         step: state.step+1
+      };
+
+    case 'SET_WIN':
+      return {
+        ...state,
+        win: true
+      };
+
+    case 'SET_PAGE':
+      console.log(state.page);
+      return {
+        ...state,
+        page: state.page + 1,
+        win: false
+      };
+
+    case 'SET_SCORE':
+      console.log(state.page);
+      return {
+        ...state,
+        score: state.score+actions.score
       };
 
     default:
