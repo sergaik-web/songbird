@@ -43,5 +43,13 @@ const setScore = (score) => {
   }
 };
 
+const setSelect = (select) => {
+  console.log(select);
+  return {
+    type: 'SET_SELECT',
+    select: select
+  }
+};
 
-export {requests, setRandomBird, setSelectClassBirds, setStep, setWin, setPage, setScore};
+
+export {requests, setRandomBird, setSelectClassBirds, setStep, setWin, setPage, setScore, setSelect};

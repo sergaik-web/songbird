@@ -1,6 +1,13 @@
 .answer-info {
+  display: flex;
   background: rgba(233,233,233,1);
   color: rgba(34,34,34, 1);
   width: 48%;
   border-radius: 10px;
+}
+
+.infoImg {
+  width: 200px;
+  height: auto;
+  margin: 15px;
 }

@@ -1,11 +1,12 @@
 const initialState = {
   gameEnd: false,
   page: 0, //in work
-  score:  0,
+  score:  0, // in work
   step: 0, //in work
   win: false, //in work
   bird: '', //in work
   classBirds: 'otherBirds', //in work
+  select: '', // in work
   loaded: false //in work
 };
 
@@ -18,7 +19,6 @@ const reducer = (state = initialState, actions) => {
       };
 
     case 'SET_RANDOM_BIRD':
-      console.log(actions.bird);
       return {
         ...state,
         bird: actions.bird
@@ -57,10 +57,16 @@ const reducer = (state = initialState, actions) => {
       };
 
     case 'SET_SCORE':
-      console.log(state.page);
       return {
         ...state,
         score: state.score+actions.score
+      };
+
+    case 'SET_SELECT':
+      console.log(actions.select);
+      return {
+        ...state,
+        select: actions.select
       };
 
     default:

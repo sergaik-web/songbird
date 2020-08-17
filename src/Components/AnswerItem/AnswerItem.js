@@ -1,6 +1,6 @@
-import React, {useEffect, useRef} from "react";
+import React, {useRef} from "react";
 import TwitterIcon from '@material-ui/icons/Twitter';
-import {setRandomBird, setStep, setWin, setScore} from "../../Actions/Actions";
+import {setRandomBird, setStep, setWin, setScore, setSelect} from "../../Actions/Actions";
 import {connect} from "react-redux";
 import db from "../../DB/DB";
 import './AnswerItem.css';
@@ -11,7 +11,6 @@ const AnswerItem = (props) => {
   let win = false;
   let scoreQuestion = 5;
 
-  useEffect(()=>{
     switch (props.classBirds) {
       case "predatorsBirds":
         selectBirds.current = db.predatorsBirds;
@@ -32,7 +31,7 @@ const AnswerItem = (props) => {
       default:
         break;
     }
-  });
+
 
   if (selectBirds.current.length > 0) {
     selectBird.current = selectBirds.current[Math.floor(Math.random()*selectBirds.current.length)].ruName;
@@ -68,6 +67,7 @@ const AnswerItem = (props) => {
   };
 
   const handleClick = (item) => {
+    props.setSelect(item.innerText);
     if (!win) {
       item.innerText === selectBird.current ?
         acceptAnswer(item, item.children[0]) :
@@ -107,7 +107,7 @@ const mapStateToProps = (state) => {
   }
 };
 
-const mapDispatchToProps = {setRandomBird, setStep, setWin, setScore};
+const mapDispatchToProps = {setRandomBird, setStep, setWin, setScore, setSelect};
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(AnswerItem);
