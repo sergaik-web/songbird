@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {connect} from "react-redux";
 import Hoc from "../Hoc";
 import './AnswerInfo.css';
@@ -6,24 +6,42 @@ import './AnswerInfo.css';
 
 const AnswerInfo = (props) => {
   const service = props.service;
-  const [urlImg, setUrlUmg] = useState('');
+  const [urlImg, setUrlImg] = useState('');
+  const [infoBird, setInfo] = useState('');
+  const [urlAudio, setUrlAudio] = useState('');
+
+  useEffect(()=>{
+    if (props.select) {
+      service.getAudioBird(props.select, props.classBirds).then(res => {
+        setUrlAudio('http:'+res.recordings[0].file)
+      });
+      service.getInfoBirds(props.select, props.classBirds).then(res => {
+          setUrlImg(res.url);
+          setInfo(res.info);
+        }
+      );
+    }
+  }, [props.select, props.classBirds, service]
+  );
 
    if (props.select) {
-     service.getInfoBirds(props.select, props.classBirds).then(res =>
-       setUrlUmg(res.photos.photo[0].url_m)
-     );
      return (
        <div className={'answer-info'}>
-         <img src={urlImg} alt={'img'} className={'infoImg'}/>
-         AnswerInfo
+         <div style={{backgroundImage: `url(${urlImg})`}} className={'infoImg'}>
+         </div>
+         <div className={'infoBird'}>
+           {infoBird}
+         </div>
        </div>
      )
    } else {
      return (
        <div className={'answer-info'}>
-         Послушайте плеер.
-         <br/>
-         Выберите птицу из списка
+         <div>
+           Послушайте плеер.
+           <br/>
+           Выберите птицу из списка
+         </div>
        </div>
      )
    }
@@ -32,7 +50,7 @@ const AnswerInfo = (props) => {
 const mapStateToProps = (state) => {
   return {
     select: state.select,
-    classBirds: state.classBirds
+    classBirds: state.classBirds,
   }
 };
 

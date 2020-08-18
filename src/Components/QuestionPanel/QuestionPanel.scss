@@ -1,17 +1,31 @@
 .random-bird {
   display: flex;
+  justify-content: center;
+  padding: 15px;
   background-color: rgba(233, 233, 233, 1);
   border-radius: 10px;
-  padding: 15px;
-  h2 {
+  flex-wrap: wrap;
+  h1 {
     color: rgba(34,34,34, 1);
     margin: 10px;
   }
 }
 
 .image-bird {
+  border-radius: 15px;
   background-size: cover;
   width: 200px;
   height: 200px;
+}
+
+.question-info {
+  width: calc(100% - 205px);
+  min-width: 230px;
+  li {
+    margin: 15px;
+  }
+  li:first-child {
+    border-bottom: solid 1px black;
+  }
 }
 

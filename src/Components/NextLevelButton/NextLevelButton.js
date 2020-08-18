@@ -12,7 +12,12 @@ const NextLevelButton = (props) => {
   };
 
   return (
-    <Button id={'next-level-button'} variant="contained" onClick={handleClick} disabled={!props.win}>
+    <Button
+      id={'next-level-button'}
+      variant="contained"
+      onClick={handleClick}
+      disabled={!props.win}
+      style={props.win ? {color: 'rgba(34,34,34, 1)'} : {color: 'white'}}>
       Next Level
     </Button>
   )

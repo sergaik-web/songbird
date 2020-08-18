@@ -81,7 +81,7 @@ const AnswerItem = (props) => {
       arrBirds.map((item, index) => {
         return (
           <li key={index} className={'answerItem noSelect'} onClick={(elem)=>handleClick(elem.target)}>
-            <TwitterIcon fontSize="small" style={{marginRight: '10px'}}/>
+            <TwitterIcon className={'itemIcon'} fontSize="small"/>
             {item}
           </li>
         )

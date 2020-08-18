@@ -27,6 +27,7 @@ const reducer = (state = initialState, actions) => {
     case 'SET_SELECT_CLASS_BIRDS':
       return {
         ...state,
+        select: '',
         gameEnd: false,
         page: 0,
         score:  0,
@@ -49,11 +50,11 @@ const reducer = (state = initialState, actions) => {
       };
 
     case 'SET_PAGE':
-      console.log(state.page);
       return {
         ...state,
         page: state.page + 1,
-        win: false
+        win: false,
+        select: ''
       };
 
     case 'SET_SCORE':
@@ -63,7 +64,6 @@ const reducer = (state = initialState, actions) => {
       };
 
     case 'SET_SELECT':
-      console.log(actions.select);
       return {
         ...state,
         select: actions.select

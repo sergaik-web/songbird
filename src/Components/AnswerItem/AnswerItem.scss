@@ -3,24 +3,33 @@ $margin: 7px;
 .answerItem {
   display: flex;
   font-size: 18px;
-  padding: 8px;
   cursor: pointer;
   align-items: center;
+  border-bottom: solid 1px black;
   &:hover {
     background-color: darkgrey;
+  }
+  &:last-child {
+    border-bottom: none;
+  }
+  p{
+    padding: 8px;
   }
 }
 
 .select-true {
-  color: green;
   &:hover {
     background-color: white;
   }
 }
 
 .select-false {
-  color: indianred;
   &:hover {
     background-color: white;
   }
+}
+
+.itemIcon {
+  padding: 8px;
+  border-right: dashed 1px black;
 }

@@ -4,15 +4,17 @@ import './TopPanel.css';
 import Navigation from "../Navigation";
 
 
-
 const TopPanel = (props) => {
   return (
     <>
       <div className={'top-panel'}>
         <div className={'logo'}/>
-        <h5>Score: {props.score}</h5>
+        <div>
+          <h5>Score: {props.score}</h5>
+          <h5>Round: {props.page}/6</h5>
+        </div>
       </div>
-      <Navigation/>
+
     </>
   )
 };
@@ -20,6 +22,7 @@ const TopPanel = (props) => {
 const mapStateToProps = (state) => {
   return (
     {
+      page: state.page,
       score: state.score
     }
   )

@@ -12,8 +12,7 @@ const Navigation = (props) => {
     {label:'Лесные птицы', active: true, classBirds: 'forestBirds'},
     {label:'Хищные птицы', active: true, classBirds: 'predatorsBirds'},
     {label:'Распостранённые птицы', active: true, classBirds: 'otherBirds'},
-    {label:'Все птицы', active: true, classBirds: 'allBirds'},
-    {label:'Морские птицы', active: false},
+    {label:'Все птицы', active: true, classBirds: 'allBirds'}
   ];
 
   const handleClick = (classBirds) => {
