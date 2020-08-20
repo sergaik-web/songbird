@@ -1,73 +1,67 @@
-import React, {useState} from "react";
-import IconButton from "@material-ui/core/IconButton";
-import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
-import PauseCircleOutlineIcon from '@material-ui/icons/PauseCircleOutline';
-import LinearProgress from '@material-ui/core/LinearProgress';
+import React, {useState, useRef, useEffect} from "react";
+import AudioSlider from "./AudioSlider";
+import PlayStopButton from "./PlayStopButton";
+import {connect} from "react-redux";
 import './AudioPlayer.css';
+
+
 
 const AudioPlayer = (props) => {
   const urlAudio = props.url;
   const player = document.getElementById('player');
   const [play, setPlay] = useState(false);
   const [audioLoad, setAudioLoad] = useState(false);
-  const [duration, setDuration] = useState('');
-  const [currentTime, setCurrentTime] = useState(0);
-  const [countStatusBar, setCountStatusBar] = useState(0);
+
+  useEffect(()=>{
+    if (props.win) {
+      setPlay(false);
+      player.pause();
+    }
+  }, [play,audioLoad,props.win]);
+
+  useEffect(()=>{
+    setAudioLoad(false)
+  }, [props.page]);
+
+
 
   const handleClick = () => {
     setPlay(!play);
-    play ? player.pause():player.play();
+    !play ? player.play() : player.pause();
   };
 
-  if (countStatusBar === 100) {
-    setPlay(!play);
-    player.currentTime = 0;
-    setCountStatusBar(0);
-  }
-
-  const audioOnLoad = () => {
+  const audioOnLoadMeta = () => {
     setAudioLoad(true);
-    setDuration(Math.floor(player.duration*100)/100);
-    setInterval(()=>{
-      setCurrentTime(Math.floor(player.currentTime*100)/100);
-      setCountStatusBar(Math.floor(player.currentTime*100/player.duration));
-    }, 200)
   };
 
-  const PlayerUi = () => {
-    return (
-      <>
-      <IconButton onClick={()=>handleClick()}>
-        {play ?
-          <PauseCircleOutlineIcon fontSize={'large'}/>:
-          <PlayCircleOutlineIcon fontSize={"large"}/>
-        }
-      </IconButton>
-      <LinearProgress
-        className={'status-bar'}
-        variant="determinate"
-        value={countStatusBar} />
-      <div>
-        <p>{duration}</p>
-        <br/>
-        <p>{currentTime}</p>
-        <p>{countStatusBar}</p>
-      </div>
-      </>
-    )
+  const loadStart = () => {
+    setAudioLoad(false);
+    setPlay(false);
   };
 
   return (
     <div className={'question-player'}>
-      <audio
-        id={'player'}
-        src={urlAudio}
-        autoPlay={false}
-        onLoadedMetadata={()=>audioOnLoad()}
+      <audio id={'player'}
+             src={urlAudio}
+             autoPlay={false}
+             onLoadedMetadata={audioOnLoadMeta}
+             onEnded={handleClick}
+             onLoadStart={loadStart}
       />
-      {audioLoad ? <PlayerUi/> : 'Loading...'}
+      {audioLoad ?
+        <>
+        <PlayStopButton play={play} handleClick={()=>handleClick()}/>
+        <AudioSlider player={player}/>
+        </>:'Loading...'}
     </div>
   )
 };
 
-export default AudioPlayer;
+const mapStateToProps = (state) => {
+  return {
+    win: state.win,
+    page: state.page
+  }
+};
+
+export default connect(mapStateToProps)(AudioPlayer);

@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import AudioPlayer from '../AudioPlayer/AudioPlayer'
 import {connect} from "react-redux";
 import Hoc from "../Hoc";
 import './AnswerInfo.css';
@@ -29,9 +30,11 @@ const AnswerInfo = (props) => {
        <div className={'answer-info'}>
          <div style={{backgroundImage: `url(${urlImg})`}} className={'infoImg'}>
          </div>
+         <AudioPlayer url={urlAudio}/>
          <div className={'infoBird'}>
            {infoBird}
          </div>
+
        </div>
      )
    } else {

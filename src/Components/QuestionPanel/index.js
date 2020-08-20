@@ -1,2 +1,2 @@
-import RandomBird from "./QuestionPanel";
-export default RandomBird;
+import QuestionPanel from "./QuestionPanel";
+export default QuestionPanel;

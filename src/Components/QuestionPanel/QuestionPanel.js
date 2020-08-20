@@ -18,9 +18,8 @@ const QuestionPanel = (props) => {
       service.getAudioBird(props.bird, props.classBirds).then(res => {
         setUrlAudio('http:'+res.recordings[0].file)
       });
-      console.log(urlAudio)
     }
-    });
+    }, [props.bird]);
 
 
   if (props.win){
