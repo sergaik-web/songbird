@@ -31,6 +31,7 @@ const AudioSlider = ({player}) => {
         onChangeCommitted={handleChangeCommitted}
         value={countStatusBar}
         onChange={handleChange}
+
       />
       <Timer value={player.currentTime}/>
       <Timer value={player.duration}/>

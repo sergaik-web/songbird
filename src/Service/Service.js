@@ -2,7 +2,7 @@ import db from '../DB/DB';
 
 export default class Service {
   async getInfoBirds(birdName, classBirds) {
-    return db[classBirds].filter(item => item.ruName === birdName )[0];
+    return db[classBirds].filter(item => item.ruName === birdName)[0];
   }
 
   async getAudioBird(birdName, classBirds) {
@@ -16,11 +16,7 @@ export default class Service {
     }
   }
 
-  async getOtherBirds() {
-    return await this.getDataDb("otherBirds");
-  }
-
-  async getAllBirds() {
-    return await this.getDataDb();
+  getEngName (birdName, classBirds) {
+    return db[classBirds].filter(item=>item.ruName === birdName)[0].engName
   }
 };

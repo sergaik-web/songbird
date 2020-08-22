@@ -8,22 +8,13 @@ import './AudioPlayer.css';
 
 const AudioPlayer = (props) => {
   const urlAudio = props.url;
-  const player = document.getElementById('player');
+  const player = document.getElementById(props.name);
   const [play, setPlay] = useState(false);
   const [audioLoad, setAudioLoad] = useState(false);
 
   useEffect(()=>{
-    if (props.win) {
-      setPlay(false);
-      player.pause();
-    }
-  }, [play,audioLoad,props.win]);
-
-  useEffect(()=>{
     setAudioLoad(false)
   }, [props.page]);
-
-
 
   const handleClick = () => {
     setPlay(!play);
@@ -41,7 +32,7 @@ const AudioPlayer = (props) => {
 
   return (
     <div className={'question-player'}>
-      <audio id={'player'}
+      <audio id={props.name}
              src={urlAudio}
              autoPlay={false}
              onLoadedMetadata={audioOnLoadMeta}

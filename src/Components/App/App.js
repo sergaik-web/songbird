@@ -1,18 +1,34 @@
-import React from 'react';
+import React from "react";
 import Header from "../Header";
 import QuestionPanel from "../QuestionPanel";
 import GamePanel from "../GamePanel";
-import './App.css';
+import EndGamePanel from "../EndGamePanel";
+import { connect } from "react-redux";
+import "./App.css";
 
-function App(props) {
+const App = (props) => {
+  if (props.gameEnd) {
+    return (
+      <div className={"app"}>
+        <Header />
+        <EndGamePanel />
+      </div>
+    );
+  } else {
+    return (
+      <div className={"app"}>
+        <Header />
+        <QuestionPanel />
+        <GamePanel />
+      </div>
+    );
+  }
+};
 
-  return (
-    <div className={'app'}>
-      <Header/>
-      <QuestionPanel/>
-      <GamePanel/>
-    </div>
-  );
-}
+const mapStateToProps = (state) => {
+  return {
+    gameEnd: state.gameEnd,
+  };
+};
 
-export default App;
+export default connect(mapStateToProps)(App);

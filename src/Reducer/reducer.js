@@ -1,13 +1,13 @@
 const initialState = {
-  gameEnd: false,
+  gameEnd: false, //in work
   page: 0, //in work
-  score:  0, // in work
+  score: 0, // in work
   step: 0, //in work
   win: false, //in work
-  bird: '', //in work
-  classBirds: 'otherBirds', //in work
-  select: '', // in work
-  loaded: false //in work
+  bird: "", //in work
+  classBirds: "otherBirds", //in work
+  select: "", // in work
+  loaded: false, //in work
 };
 
 const reducer = (state = initialState, actions) => {
@@ -15,58 +15,77 @@ const reducer = (state = initialState, actions) => {
     case "REQUESTS":
       return {
         ...state,
-        loaded: true
+        loaded: true,
       };
 
-    case 'SET_RANDOM_BIRD':
+    case "SET_RANDOM_BIRD":
       return {
         ...state,
-        bird: actions.bird
+        bird: actions.bird,
       };
 
-    case 'SET_SELECT_CLASS_BIRDS':
+    case "SET_SELECT_CLASS_BIRDS":
       return {
         ...state,
-        select: '',
+        select: "",
         gameEnd: false,
         page: 0,
-        score:  0,
+        score: 0,
         step: 0,
         win: false,
-        bird: '',
-        classBirds: actions.classBirds
+        bird: "",
+        classBirds: actions.classBirds,
       };
 
-    case 'SET_STEP':
+    case "SET_STEP":
       return {
         ...state,
-        step: state.step+1
+        step: state.step + 1,
       };
 
-    case 'SET_WIN':
+    case "SET_WIN":
       return {
         ...state,
-        win: true
+        win: true,
       };
 
-    case 'SET_PAGE':
+    case "SET_PAGE":
       return {
         ...state,
         page: state.page + 1,
         win: false,
-        select: ''
+        select: "",
       };
 
-    case 'SET_SCORE':
+    case "SET_SCORE":
       return {
         ...state,
-        score: state.score+actions.score
+        score: state.score + actions.score,
       };
 
-    case 'SET_SELECT':
+    case "SET_SELECT":
       return {
         ...state,
-        select: actions.select
+        select: actions.select,
+      };
+
+    case "SET_END_GAME":
+      return {
+        ...state,
+        gameEnd: true,
+      };
+
+    case "SET_NEW_GAME":
+      return {
+        ...state,
+        gameEnd: false, //in work
+        page: 0, //in work
+        score: 0, // in work
+        step: 0, //in work
+        win: false, //in work
+        bird: "", //in work
+        select: "", // in work
+        loaded: false, //in work
       };
 
     default:

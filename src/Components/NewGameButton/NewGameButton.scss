@@ -1,0 +1,12 @@
+#new-game-button {
+  color: white;
+  background-color: #00bc8c;
+  width: 90%;
+  padding: 15px;
+  margin: 25px 0;
+  text-transform: none !important;
+  font-weight: 400;
+  &:hover {
+    background-color: #00efb2;
+  }
+}

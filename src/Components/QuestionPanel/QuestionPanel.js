@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from "react";
 import AudioPlayer from "../AudioPlayer";
 import './QuestionPanel.css';
+import img from './unBird.png'
 import {connect} from "react-redux";
 import Hoc from "../Hoc";
 
 
 const QuestionPanel = (props) => {
-  const urlUnBird = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRIvGutgFl9ujQ8MDmwaX4_qJPfN5Zx3ah61g&usqp=CAU';
+  const urlUnBird = img;
   const service = props.service;
 
   const [urlAudio, setUrlAudio] = useState('');
@@ -38,10 +39,10 @@ const QuestionPanel = (props) => {
       <div className={'question-info'}>
         <ul>
           <li>
-            <h1>{props.win ? props.bird : '*****'}</h1>
+            <h3>{props.win ? props.bird : '******'}</h3>
           </li>
           <li>
-            <AudioPlayer url={urlAudio}/>
+            <AudioPlayer url={urlAudio} name={'question-info'}/>
           </li>
         </ul>
       </div>

@@ -5,12 +5,19 @@ $margin: 7px;
   font-size: 18px;
   cursor: pointer;
   align-items: center;
-  border-bottom: solid 1px black;
+  border: solid 1px #555;
+  height: 50px;
   &:hover {
-    background-color: darkgrey;
+    background-color: #444;
+  }
+  &:first-child{
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
   }
   &:last-child {
     border-bottom: none;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
   }
   p{
     padding: 8px;
@@ -19,17 +26,17 @@ $margin: 7px;
 
 .select-true {
   &:hover {
-    background-color: white;
+    background-color: #444;
   }
 }
 
 .select-false {
   &:hover {
-    background-color: white;
+    background-color: #444;
   }
 }
 
 .itemIcon {
+  color: #444;
   padding: 8px;
-  border-right: dashed 1px black;
 }

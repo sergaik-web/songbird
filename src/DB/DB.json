@@ -257,5 +257,185 @@
       "info": "Отличий от других представителей семейства трясогузковых сравнительно немного. У длинного узкого, прямо обрезанного хвоста два средних пера немного длиннее боковых; 1-е маховое перо короче 2-го и 3-го; слабоизогнутый коготь заднего пальца короче самого пальца.",
       "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Motacilla_alba_alba_cropped.JPG/120px-Motacilla_alba_alba_cropped.jpg"
     }
+  ],
+  "oceanBirds": [
+    {
+      "ruName": "Чайка",
+      "engName": "Larus argentatus",
+      "info": "Семейство птиц отряда ржанкообразных, обитающих в морских акваториях либо внутренних водоёмах, а также в пределах населённых пунктов. Известны с олигоцена.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Lachmoewe2cele4.jpg/275px-Lachmoewe2cele4.jpg"
+    },
+    {
+      "ruName": "Пингвин",
+      "engName": "Aptenodytes forsteri",
+      "info": "Семейство нелетающих морских птиц, единственное современное в отряде пингвинообра́зных",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Manchot_01.jpg/275px-Manchot_01.jpg"
+    },
+    {
+      "ruName": "Буревестник",
+      "engName": "Puffinus griseus",
+      "info": "К буревестниковым относятся многочисленные виды, в основном это птицы средней величины. Представители этого семейства встречаются у берегов всех океанов, но большей частью в Южном полушарии.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Damier_du_Cap_-_Cape_Petrel.jpg/275px-Damier_du_Cap_-_Cape_Petrel.jpg"
+    },
+    {
+      "ruName": "Альбатрос",
+      "engName": "Diomedea exulans",
+      "info": "Обитают альбатросы в Южном океане (недавнее образование — воды, окружающие Антарктиду) и в основном гнездятся на отдалённых островах.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Diomedea_epomophora_in_flight_5_-_SE_Tasmania.jpg/275px-Diomedea_epomophora_in_flight_5_-_SE_Tasmania.jpg"
+    },
+    {
+      "ruName": "Баклан",
+      "engName": "Phalacrocorax carbo",
+      "info": "Широко распространены по всему миру с большим биологическим разнообразием в тропическом и умеренном климате.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Phalacrocorax_carbo_%282005_08_28%29.jpg/120px-Phalacrocorax_carbo_%282005_08_28%29.jpg"
+    },
+    {
+      "ruName": "Олуша",
+      "engName": "Sula nebouxii",
+      "info": "Семейство морских птиц из отряда олушеобразных. Являются отличными летунами и проводят большую часть своей жизни над открытым морем.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Northern_Gannet_2006_2.jpg/275px-Northern_Gannet_2006_2.jpg"
+    },
+    {
+      "ruName": "Пеликан",
+      "engName": "Pelecanus",
+      "info": "Самые крупные птицы в своём отряде: длина тела 130—180 см, масса 7—14 кг. Облик очень характерный: неуклюжее, массивное туловище, большие крылья, короткие и толстые ноги с широкой перепонкой между пальцами, короткий закруглённый хвост.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Brown_Pelican21K.jpg/120px-Brown_Pelican21K.jpg"
+    },
+    {
+      "ruName": "Поморник",
+      "engName": "Stercorarius maccormicki",
+      "info": "Относительно крупная птица бурого цвета с характерными удлинёнными белыми пятнами в основании маховых перьев на крыльях, которая гнездится в высокоширотной Антарктике циркумполярно.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Subantarktikskua01.jpg/275px-Subantarktikskua01.jpg"
+    }
+  ],
+  "songBirds": [
+    {
+      "ruName": "Жаворонок",
+      "engName": "Alauda arvensis",
+      "info": "Жаворонковые — птицы малого или среднего размера: длина 10—25 см, масса от 15 до 80 г. Телосложение крепкое, шея короткая, голова большая. Крылья длинные, широкие и острые, обеспечивающие быстрый полет. Форма клюва сильно отличается по родам и видам. ",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Alauda_arvensis_2.jpg/275px-Alauda_arvensis_2.jpg"
+    },
+    {
+      "ruName": "Скворец",
+      "engName": "Sturnus vulgaris",
+      "info": "К роду скворцов относятся около 10 видов птиц средней величины, мало отличающихся одна от другой как по окраске, так и по образу жизни.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Asian_Pied_Starling_I_IMG_5520.jpg/275px-Asian_Pied_Starling_I_IMG_5520.jpg"
+    },
+    {
+      "ruName": "Трясогузка",
+      "engName": "Motacilla flava",
+      "info": "Отличий от других представителей семейства трясогузковых сравнительно немного. У длинного узкого, прямо обрезанного хвоста два средних пера немного длиннее боковых; 1-е маховое перо короче 2-го и 3-го; слабоизогнутый коготь заднего пальца короче самого пальца.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Motacilla_alba_alba_cropped.JPG/120px-Motacilla_alba_alba_cropped.jpg"
+    },
+    {
+      "ruName": "Синица",
+      "engName": "Parus major",
+      "info": "Синицы, или настоящие синицы (лат. Parus) — род птиц семейства синицевых. Обычный представитель рода — большая синица (Parus major) широко распространена на территории России",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Parus_major_-_2013%2703%2730-16h47m21s.jpg/240px-Parus_major_-_2013%2703%2730-16h47m21s.jpg"
+    },
+    {
+      "ruName": "Дрозд",
+      "engName": "Turdus merula",
+      "info": "Распространены в Европе, Азии и Америке; завезены в Новую Зеландию. На зиму северные виды улетают на юг, собираясь большими стаями.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Blackbird_%28male%29.jpg/120px-Blackbird_%28male%29.jpg"
+    },
+    {
+      "ruName": "Соловей",
+      "engName": "Luscinia luscinia",
+      "info": "Соловьи́, соловьи́ные (лат. Luscinia) — род птиц из отряда воробьинообразных. В зависимости от подхода к классификации относится либо к семейству дроздовых (Turdidae), либо к семейству мухоловковых (Muscicapidae).",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Luscinia_megarhynchos_Istria_01.jpg/200px-Luscinia_megarhynchos_Istria_01.jpg"
+    },
+    {
+      "ruName": "Канарейка",
+      "engName": "Serinus canaria",
+      "info": "Канарейка несколько больше, чем дикий предок, канарский канареечный вьюрок. Певчие и цветные канарейки длиной примерно от 13,5 до 14,5 см.",
+      "url": "https://www.pitomec.ru/upload/kinds_photos/Kanareyka.jpg"
+    }
+  ],
+  "warmUp": [
+    {
+      "ruName": "Снегирь",
+      "engName": "Pyrrhula pyrrhula",
+      "info": "Птица мелких размеров, чуть больше воробья. Голова сверху, вокруг клюва и глаз — чёрная. Маховые и рулевые перья тоже чёрные, с синим металлическим отливом. Поясница и подхвостье — белые. Спина, плечи и зашеек у самца серые.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Bullfinch_side-on.jpg/240px-Bullfinch_side-on.jpg"
+    },
+    {
+      "ruName": "Аист",
+      "engName": "Ciconia ciconia",
+      "info": "Для аистов характерны длинные обнажённые ноги, покрытые сетчатой кожей; клюв длинный, прямой, конический; передние пальцы соединены между собой широкой плавательной перепонкой, пальцы короткие с розоватыми когтями; на голове и шее местами голая кожа.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Ciconia_Diversity.jpg/275px-Ciconia_Diversity.jpg"
+    },
+    {
+      "ruName": "Цапля",
+      "engName": "Ardea cinerea",
+      "info": "Ца́плевые (лат. Ardeidae) — семейство птиц отряда пеликанообразных. В целом семейство имеет ряд общих признаков, но классификация отдельных видов до сих пор затруднена и находится на стадии пересмотра. Выделение цапель в отдельный отряд цаплеобразные (Ardeiformes) не является общепризнанным.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Ardea_cinerea.jpg/275px-Ardea_cinerea.jpg"
+    },
+    {
+      "ruName": "Соловей",
+      "engName": "Luscinia luscinia",
+      "info": "Соловьи́, соловьи́ные (лат. Luscinia) — род птиц из отряда воробьинообразных. В зависимости от подхода к классификации относится либо к семейству дроздовых (Turdidae), либо к семейству мухоловковых (Muscicapidae).",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Luscinia_megarhynchos_Istria_01.jpg/200px-Luscinia_megarhynchos_Istria_01.jpg"
+    },
+    {
+      "ruName": "Воробей",
+      "engName": "Passer domesticus",
+      "info": "Воробьи́ные (лат. Passeridae) — семейство небольших оседлых, реже кочевых, птиц из отряда воробьинообразных. Представители семейства имеют короткие ноги, многие виды по земле передвигаются прыжками.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Petronia_xanthocollis.jpg/275px-Petronia_xanthocollis.jpg"
+    },
+    {
+      "ruName": "Голубь",
+      "engName": "Columba livia",
+      "info": "Длина крыла 20—27 см, масса 200—650 г[2]. Населяют Евразию, Африку и Австралию. Наиболее распространённый вид из этого рода — сизый голубь, интродуцирован на все континенты.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/ColumbaOenas.jpg/275px-ColumbaOenas.jpg"
+    },
+    {
+      "ruName": "Кряква",
+      "engName": "Anas platyrhynchos",
+      "info": "Кря́ква (лат. Anas platyrhynchos) — птица из семейства утиных (Anatidae) отряда гусеобразных (Anseriformes). Наиболее известная и распространённая дикая утка[2]. Длина тела самца около 62 см, самки — около 57 см, масса достигает 1—1,5 кг[3] (осенью, когда птица откормится перед самым перелётом, её вес может достигать 2 кг). Голова и шея самца зелёные, зоб и грудь коричнево-бурые, спина и брюшная сторона тела серого цвета с тонкими поперечными пятнышками.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Anas_platyrhynchos_male_female_quadrat.jpg/240px-Anas_platyrhynchos_male_female_quadrat.jpg"
+    },
+    {
+      "ruName": "Дрозд",
+      "engName": "Turdus merula",
+      "info": "Распространены в Европе, Азии и Америке; завезены в Новую Зеландию. На зиму северные виды улетают на юг, собираясь большими стаями.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Blackbird_%28male%29.jpg/120px-Blackbird_%28male%29.jpg"
+    },
+    {
+      "ruName": "Синица",
+      "engName": "Parus major",
+      "info": "Синицы, или настоящие синицы (лат. Parus) — род птиц семейства синицевых. Обычный представитель рода — большая синица (Parus major) широко распространена на территории России",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Parus_major_-_2013%2703%2730-16h47m21s.jpg/240px-Parus_major_-_2013%2703%2730-16h47m21s.jpg"
+    },
+    {
+      "ruName": "Жаворонок",
+      "engName": "Alauda arvensis",
+      "info": "Жаворонковые — птицы малого или среднего размера: длина 10—25 см, масса от 15 до 80 г. Телосложение крепкое, шея короткая, голова большая. Крылья длинные, широкие и острые, обеспечивающие быстрый полет. Форма клюва сильно отличается по родам и видам. ",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Alauda_arvensis_2.jpg/275px-Alauda_arvensis_2.jpg"
+    },
+    {
+      "ruName": "Ворон",
+      "engName": "Corvus corax",
+      "info": "Это крупнейший представитель воробьинообразных птиц: длина тела достигает 60—70 см, размах крыльев 120—150 см, масса 800—1600 г (по другим данным, до 2000 г[). Другие характерные особенности: очень массивный, высокий и острый клюв, и удлинённые перья на горле (так называемая «борода»).",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Common_Raven_Grand_Canyon_1.jpg/275px-Common_Raven_Grand_Canyon_1.jpg"
+    },
+    {
+      "ruName": "Ворона",
+      "engName": "Corvus corone",
+      "info": "Голова, крылья и хвост чёрные, туловище серое. Средняя длина — 50 сантиметров, масса тела 460—735 граммов, размах крыльев — до 1 метра.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/2013.06.24-12.-Woblitzsee-Havelberge-Nebelkraehe.jpg/275px-2013.06.24-12.-Woblitzsee-Havelberge-Nebelkraehe.jpg"
+    },
+    {
+      "ruName": "Скворец",
+      "engName": "Sturnus vulgaris",
+      "info": "К роду скворцов относятся около 10 видов птиц средней величины, мало отличающихся одна от другой как по окраске, так и по образу жизни.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Asian_Pied_Starling_I_IMG_5520.jpg/275px-Asian_Pied_Starling_I_IMG_5520.jpg"
+    },
+    {
+      "ruName": "Трясогузка",
+      "engName": "Motacilla flava",
+      "info": "Отличий от других представителей семейства трясогузковых сравнительно немного. У длинного узкого, прямо обрезанного хвоста два средних пера немного длиннее боковых; 1-е маховое перо короче 2-го и 3-го; слабоизогнутый коготь заднего пальца короче самого пальца.",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Motacilla_alba_alba_cropped.JPG/120px-Motacilla_alba_alba_cropped.jpg"
+    }
   ]
 }
