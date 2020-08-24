@@ -8,12 +8,12 @@ const PlayStopButton = ({ play, handleClick }) => {
       {play ? (
         <PauseCircleOutlineIcon
           onClick={handleClick}
-          style={{ color: "#00efb2", fontSize: 50, marginTop: "-30px" }}
+          style={{ color: "#00efb2", fontSize: 50}}
         />
       ) : (
         <PlayCircleOutlineIcon
           onClick={handleClick}
-          style={{ color: "#00efb2", fontSize: 50, marginTop: "-30px" }}
+          style={{ color: "#00efb2", fontSize: 50}}
         />
       )}
     </>
