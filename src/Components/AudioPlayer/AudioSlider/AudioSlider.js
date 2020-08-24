@@ -53,7 +53,7 @@ const AudioSlider = ({ player, name }) => {
 const Timer = ({ value }) => {
   const min = Math.floor(Math.floor(Math.floor(value * 100) / 100) / 60);
   const sec = Math.floor(Math.floor(value * 100) / 100) - 60 * min;
-  return <p>{`${min}:${sec}`}</p>;
+  return <p>{`${min>=10?min:'0'+String(min)}:${sec>=10 ? sec : '0'+ String(sec)}`}</p>;
 };
 
 export default AudioSlider;

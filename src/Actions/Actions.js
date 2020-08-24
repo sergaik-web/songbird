@@ -4,13 +4,6 @@ const requests = () => {
   };
 };
 
-const setSelectClassBirds = (classBirds) => {
-  return {
-    type: "SET_SELECT_CLASS_BIRDS",
-    classBirds: classBirds,
-  };
-};
-
 const setRandomBird = (bird) => {
   return {
     type: "SET_RANDOM_BIRD",
@@ -59,7 +52,6 @@ const setNewGame = () => {
 export {
   requests,
   setRandomBird,
-  setSelectClassBirds,
   setWin,
   setPage,
   setScore,

@@ -1,8 +1,7 @@
-import React, { useRef } from "react";
+import React, {useEffect} from "react";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import {
   setRandomBird,
-  setStep,
   setWin,
   setScore,
   setSelect,
@@ -14,62 +13,29 @@ import db from "../../DB/DB";
 import "./AnswerItem.css";
 
 const AnswerItem = (props) => {
-  const selectBirds = useRef(db.otherBirds);
-  const selectBird = useRef("");
+  const selectBirds = db[props.classBirds];
+  const selectBird = selectBirds[Math.floor(Math.random() * selectBirds.length)].ruName;
   let win = false;
   let scoreQuestion = 5;
 
-  switch (props.classBirds) {
-    case "predatorsBirds":
-      selectBirds.current = db.predatorsBirds;
-      break;
-
-    case "forestBirds":
-      selectBirds.current = db.forestBirds;
-      break;
-
-    case "songBirds":
-      selectBirds.current = db.songBirds;
-      break;
-
-    case "oceanBirds":
-      selectBirds.current = db.oceanBirds;
-      break;
-
-    case "otherBirds":
-      selectBirds.current = db.otherBirds;
-      break;
-
-    case "warmUp":
-      selectBirds.current = db.warmUp;
-      break;
-
-    default:
-      break;
-  }
-
-  if (selectBirds.current.length > 0) {
-    selectBird.current =
-      selectBirds.current[
-        Math.floor(Math.random() * selectBirds.current.length)
-      ].ruName;
-    props.setRandomBird(selectBird.current);
-    console.log(selectBird.current);
-  }
+  useEffect(()=>{
+    props.setRandomBird(selectBird);
+    console.log(selectBird);
+  },[props.classBirds]);
 
   const createArrBirds = () => {
     const randomPosition = randomCount();
     let arrBirds = [];
     while (arrBirds.length < 5) {
       const randomBird =
-        selectBirds.current[
-          Math.floor(Math.random() * selectBirds.current.length)
+        selectBirds[
+          Math.floor(Math.random() * selectBirds.length)
         ].ruName;
-      if (!arrBirds.includes(randomBird) && randomBird !== selectBird.current) {
+      if (!arrBirds.includes(randomBird) && randomBird !== selectBird) {
         arrBirds.push(randomBird);
       }
     }
-    arrBirds.splice(randomPosition, 0, selectBird.current);
+    arrBirds.splice(randomPosition, 0, selectBird);
     return arrBirds;
   };
 
@@ -94,7 +60,7 @@ const AnswerItem = (props) => {
   const handleClick = (item) => {
     props.setSelect(item.innerText);
     if (!win) {
-      item.innerText === selectBird.current
+      item.innerText === selectBird
         ? acceptAnswer(item, item.children[0], item.children[1])
         : rejectAnswer(item, item.children[0], item.children[1]);
     }
@@ -131,7 +97,6 @@ const randomCount = (count = 6) => {
 const mapStateToProps = (state) => {
   return {
     classBirds: state.classBirds,
-    page: state.page,
   };
 };
 

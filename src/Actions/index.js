@@ -12,7 +12,6 @@ import {
 export default {
   requests,
   setRandomBird,
-  setSelectClassBirds,
   setWin,
   setPage,
   setScore,

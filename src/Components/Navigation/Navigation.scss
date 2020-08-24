@@ -1,14 +1,9 @@
 .nav-item {
+  cursor: default!important;
   font-size: 0.9375rem !important;
   font-weight: 400 !important;
   flex-grow: 1;
   text-transform: none !important;
-  &:focus {
-    background-color: #00bc8c !important;
-  }
-  &:active {
-    background-color: #00bc8c !important;
-  }
 }
 
 .navigation {

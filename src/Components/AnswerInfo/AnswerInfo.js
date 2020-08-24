@@ -14,7 +14,6 @@ const AnswerInfo = (props) => {
   useEffect(() => {
     if (props.select) {
       service.getAudioBird(props.select, props.classBirds).then((res) => {
-        console.log(res.recordings[0], props.select);
         setUrlAudio("http:" + res.recordings[0].file);
       });
       service.getInfoBirds(props.select, props.classBirds).then((res) => {
@@ -55,7 +54,7 @@ const AnswerInfo = (props) => {
         <div>
           Послушайте плеер.
           <br />
-          Выберите птицу из списка
+          Выберите птицу из списка.
         </div>
       </div>
     );

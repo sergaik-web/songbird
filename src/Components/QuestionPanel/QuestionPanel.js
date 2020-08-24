@@ -22,12 +22,13 @@ const QuestionPanel = (props) => {
     }
     }, [props.bird]);
 
-
-  if (props.win){
-    props.service.getInfoBirds(props.bird, props.classBirds).then(res => {
-      setUrlImage(res.url);
-    });
-  }
+  useEffect(()=>{
+    if (props.win){
+      props.service.getInfoBirds(props.bird, props.classBirds).then(res => {
+        setUrlImage(res.url);
+      });
+    }
+  }, [props.win]);
 
   return (
     <div className={'random-bird'}>

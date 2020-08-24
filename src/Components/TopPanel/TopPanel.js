@@ -1,7 +1,6 @@
 import React from "react";
 import {connect} from "react-redux";
 import './TopPanel.css';
-import Navigation from "../Navigation";
 
 
 const TopPanel = (props) => {

@@ -18,9 +18,10 @@
 .image-bird {
   border-radius: 15px;
   background-size: cover;
+  background-repeat: no-repeat;
   width: 200px;
   height: 155px;
-  background-position: center;
+  background-position: top;
 }
 
 .question-info {

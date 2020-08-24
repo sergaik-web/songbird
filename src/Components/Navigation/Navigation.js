@@ -2,7 +2,6 @@ import React from "react";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import { connect } from "react-redux";
-import { setSelectClassBirds } from "../../Actions/Actions";
 import "./Navigation.css";
 
 const Navigation = (props) => {
@@ -15,14 +14,9 @@ const Navigation = (props) => {
     { label: "Распостранённые птицы", classBirds: "warmUp" },
   ];
 
-  const handleClick = (classBirds) => {
-    props.setSelectClassBirds(classBirds);
-  };
-
   const navItems = dataNavItems.map((item, index) => {
     return (
       <Button
-        onClick={() => handleClick(item.classBirds)}
         key={index}
         className={"nav-item"}
         style={
@@ -49,6 +43,5 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = { setSelectClassBirds };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navigation);
+export default connect(mapStateToProps)(Navigation);

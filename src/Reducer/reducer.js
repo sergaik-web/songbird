@@ -9,6 +9,15 @@ const initialState = {
   loaded: false, //in work
 };
 
+const dataClassBirds = [
+  "otherBirds" ,
+  "forestBirds",
+  "predatorsBirds",
+  "songBirds",
+  "oceanBirds",
+  "warmUp",
+];
+
 const reducer = (state = initialState, actions) => {
   switch (actions.type) {
     case "REQUESTS":
@@ -23,18 +32,6 @@ const reducer = (state = initialState, actions) => {
         bird: actions.bird,
       };
 
-    case "SET_SELECT_CLASS_BIRDS":
-      return {
-        ...state,
-        select: "",
-        gameEnd: false,
-        page: 1,
-        score: 0,
-        step: 0,
-        win: false,
-        bird: "",
-        classBirds: actions.classBirds,
-      };
 
     case "SET_WIN":
       return {
@@ -45,6 +42,7 @@ const reducer = (state = initialState, actions) => {
     case "SET_PAGE":
       return {
         ...state,
+        classBirds: dataClassBirds[state.page],
         page: state.page + 1,
         win: false,
         select: "",
@@ -71,6 +69,7 @@ const reducer = (state = initialState, actions) => {
     case "SET_NEW_GAME":
       return {
         ...state,
+        classBirds: dataClassBirds[0],
         gameEnd: false, //in work
         page: 1, //in work
         score: 0, // in work
