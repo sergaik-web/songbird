@@ -14,6 +14,7 @@ const AnswerInfo = (props) => {
   useEffect(() => {
     if (props.select) {
       service.getAudioBird(props.select, props.classBirds).then((res) => {
+        console.log(res.recordings[0], props.select);
         setUrlAudio("http:" + res.recordings[0].file);
       });
       service.getInfoBirds(props.select, props.classBirds).then((res) => {
