@@ -1,10 +1,8 @@
-import React, {useState, useRef, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import AudioSlider from "./AudioSlider";
 import PlayStopButton from "./PlayStopButton";
-import {connect} from "react-redux";
-import './AudioPlayer.css';
-
-
+import { connect } from "react-redux";
+import "./AudioPlayer.css";
 
 const AudioPlayer = (props) => {
   const urlAudio = props.url;
@@ -12,9 +10,16 @@ const AudioPlayer = (props) => {
   const [play, setPlay] = useState(false);
   const [audioLoad, setAudioLoad] = useState(false);
 
-  useEffect(()=>{
-    setAudioLoad(false)
+  useEffect(() => {
+    setAudioLoad(false);
   }, [props.page]);
+
+  useEffect(() => {
+    if (props.win && player) {
+      setPlay(false);
+      player.pause();
+    }
+  }, [props.win]);
 
   const handleClick = () => {
     setPlay(!play);
@@ -31,28 +36,32 @@ const AudioPlayer = (props) => {
   };
 
   return (
-    <div className={'question-player'}>
-      <audio id={props.name}
-             src={urlAudio}
-             autoPlay={false}
-             onLoadedMetadata={audioOnLoadMeta}
-             onEnded={handleClick}
-             onLoadStart={loadStart}
+    <div className={"question-player"}>
+      <audio
+        id={props.name}
+        src={urlAudio}
+        autoPlay={false}
+        onLoadedMetadata={audioOnLoadMeta}
+        onEnded={handleClick}
+        onLoadStart={loadStart}
       />
-      {audioLoad ?
+      {audioLoad ? (
         <>
-        <PlayStopButton play={play} handleClick={()=>handleClick()}/>
-        <AudioSlider player={player}/>
-        </>:'Loading...'}
+          <PlayStopButton play={play} handleClick={() => handleClick()} />
+          <AudioSlider player={player} name={props.name} />
+        </>
+      ) : (
+        "Loading..."
+      )}
     </div>
-  )
+  );
 };
 
 const mapStateToProps = (state) => {
   return {
     win: state.win,
-    page: state.page
-  }
+    page: state.page,
+  };
 };
 
 export default connect(mapStateToProps)(AudioPlayer);

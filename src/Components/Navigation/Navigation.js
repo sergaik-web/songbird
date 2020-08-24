@@ -30,7 +30,6 @@ const Navigation = (props) => {
             ? { backgroundColor: "#00bc8c", color: "white", border: "none" }
             : { backgroundColor: "#008966", color: "white", border: "none" }
         }
-        active
       >
         {item.label}
       </Button>

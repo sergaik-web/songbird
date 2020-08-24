@@ -1,8 +1,7 @@
 const initialState = {
   gameEnd: false, //in work
-  page: 0, //in work
+  page: 1, //in work
   score: 0, // in work
-  step: 0, //in work
   win: false, //in work
   bird: "", //in work
   classBirds: "otherBirds", //in work
@@ -29,18 +28,12 @@ const reducer = (state = initialState, actions) => {
         ...state,
         select: "",
         gameEnd: false,
-        page: 0,
+        page: 1,
         score: 0,
         step: 0,
         win: false,
         bird: "",
         classBirds: actions.classBirds,
-      };
-
-    case "SET_STEP":
-      return {
-        ...state,
-        step: state.step + 1,
       };
 
     case "SET_WIN":
@@ -79,7 +72,7 @@ const reducer = (state = initialState, actions) => {
       return {
         ...state,
         gameEnd: false, //in work
-        page: 0, //in work
+        page: 1, //in work
         score: 0, // in work
         step: 0, //in work
         win: false, //in work

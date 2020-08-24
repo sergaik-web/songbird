@@ -18,12 +18,6 @@ const setRandomBird = (bird) => {
   };
 };
 
-const setStep = () => {
-  return {
-    type: "SET_STEP",
-  };
-};
-
 const setWin = () => {
   return {
     type: "SET_WIN",
@@ -44,7 +38,6 @@ const setScore = (score) => {
 };
 
 const setSelect = (select) => {
-  console.log(select);
   return {
     type: "SET_SELECT",
     select: select,
@@ -67,7 +60,6 @@ export {
   requests,
   setRandomBird,
   setSelectClassBirds,
-  setStep,
   setWin,
   setPage,
   setScore,

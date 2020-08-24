@@ -54,6 +54,7 @@ const AnswerItem = (props) => {
         Math.floor(Math.random() * selectBirds.current.length)
       ].ruName;
     props.setRandomBird(selectBird.current);
+    console.log(selectBird.current);
   }
 
   const createArrBirds = () => {
@@ -87,7 +88,6 @@ const AnswerItem = (props) => {
     audio.play();
     icon.style.color = "#d62c1a";
     item.classList = "answerItem select-false";
-    props.setStep();
     scoreQuestion--;
   };
 
@@ -137,7 +137,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   setRandomBird,
-  setStep,
   setWin,
   setScore,
   setSelect,

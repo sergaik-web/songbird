@@ -1,0 +1,13 @@
+.volume {
+  width: 40%!important;
+  flex-wrap: nowrap;
+  @media screen and (max-width: 450px){
+    width: 100%!important;
+  }
+  @media screen and (min-width: 610px){
+    width: 40%!important;
+  }
+  @media screen and (max-width: 700px){
+    width: 100%!important;
+  }
+}

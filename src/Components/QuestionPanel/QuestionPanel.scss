@@ -24,14 +24,23 @@
 }
 
 .question-info {
+  display: flex;
   width: calc(100% - 245px);
-  min-width: 230px;
   margin-left: 40px;
+  ul {
+    width: 100%;
+  }
   li {
     padding: .25rem;
   }
   li:first-child {
     border-bottom: solid 1px #555;
+  }
+
+  @media screen and (max-width: 610px) {
+    margin-left: 0;
+    flex-wrap: wrap;
+    width: 100%;
   }
 }
 
