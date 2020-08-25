@@ -4,15 +4,21 @@ import Error from "../Error";
 class ErrorBoundary extends React.Component {
   state = {
     error: false,
+    errorInfo: []
   };
 
   componentDidCatch(error, errorInfo) {
-    this.setState({ error: true });
+    this.setState(
+      {
+        error: true,
+        errorInfo: [error, errorInfo]
+      }
+      );
   }
 
   render() {
     if (this.state.error) {
-      return Error();
+      return <Error error={this.state.errorInfo}/>;
     }
 
     return this.props.children;
