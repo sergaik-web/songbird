@@ -6,18 +6,8 @@ export default class Service {
   }
 
   getAudioBird(birdName, classBirds) {
-    console.log(birdName, classBirds);
-    console.log(db[classBirds].filter((item) => item.ruName === birdName)[0]);
     const urlMp3 = db[classBirds].filter((item) => item.ruName === birdName)[0].mp3;
     return urlMp3;
-  }
-
-   getAudioUrl() {
-    for (let key in db){
-      db[key].map( (item)=>{
-        console.log(item.mp3)
-      })
-    }
   }
 
   getEngName(birdName, classBirds) {

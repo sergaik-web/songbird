@@ -11,8 +11,6 @@ const AnswerInfo = (props) => {
   const [urlAudio, setUrlAudio] = useState("");
   const [engName, setEngName] = useState("");
 
-  useEffect(()=>{service.getAudioUrl()},[])
-
   useEffect(() => {
     if (props.select) {
       setUrlAudio(service.getAudioBird(props.select, props.classBirds));
