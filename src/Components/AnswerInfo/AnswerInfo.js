@@ -50,7 +50,7 @@ const AnswerInfo = (props) => {
     );
   } else {
     return (
-      <div className={"answer-info"}>
+      <div className={"prev"}>
         <div>
           Послушайте плеер.
           <br />

@@ -16,6 +16,9 @@
   @media screen and (min-width: 700px){
     width: 48%;
     margin-top: 0;
+    .prev {
+      text-align: center;
+    }
   }
   @media screen and (min-width: 944px){
     height: 315px;
@@ -66,5 +69,28 @@
   text-overflow: ellipsis;
   @media screen and (max-width: 944px){
     height: auto;
+  }
+}
+
+.prev {
+  display: flex;
+  width: 100%;
+  background: #303030;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 0.25rem;
+  margin-top: 15px;
+  flex-wrap: wrap;
+  text-overflow: ellipsis;
+  div {
+    margin: 15px;
+  }
+  @media screen and (min-width: 700px){
+    width: 48%;
+    margin-top: 0;
+  }
+  @media screen and (min-width: 944px){
+    height: 315px;
+    justify-content: space-between;
   }
 }
