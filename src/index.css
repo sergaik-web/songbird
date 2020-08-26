@@ -10,6 +10,7 @@ body {
   background-color: rgba(34, 34, 34, 1);
   color: white;
   line-height: 1.5;
+  min-height: 100vh;
 }
 
 ul {

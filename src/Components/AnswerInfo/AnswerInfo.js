@@ -11,15 +11,17 @@ const AnswerInfo = (props) => {
   const [urlAudio, setUrlAudio] = useState("");
   const [engName, setEngName] = useState("");
 
+  useEffect(()=>{service.getAudioUrl()},[])
+
   useEffect(() => {
     if (props.select) {
-      service.getAudioBird(props.select, props.classBirds).then((res) => {
-        setUrlAudio("http:" + res.recordings[0].file);
-      });
+      setUrlAudio(service.getAudioBird(props.select, props.classBirds));
+
       service.getInfoBirds(props.select, props.classBirds).then((res) => {
         setUrlImg(res.url);
         setInfo(res.info);
       });
+
       setEngName(service.getEngName(props.select, props.classBirds));
     }
   }, [props.select, props.classBirds, service]);

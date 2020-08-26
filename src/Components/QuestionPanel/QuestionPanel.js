@@ -16,9 +16,7 @@ const QuestionPanel = (props) => {
 
   useEffect(()=>{
     if (props.bird){
-      service.getAudioBird(props.bird, props.classBirds).then(res => {
-        setUrlAudio('http:'+res.recordings[0].file)
-      });
+      setUrlAudio(service.getAudioBird(props.bird, props.classBirds));
     }
     }, [props.bird]);
 
