@@ -53,8 +53,10 @@ const AnswerItem = (props) => {
     audio.src = audioErr;
     audio.play();
     icon.style.color = "#d62c1a";
+    if (item.classList.value !== "answerItem select-false"){
+      scoreQuestion--;
+    }
     item.classList = "answerItem select-false";
-    scoreQuestion--;
   };
 
   const handleClick = (item) => {
